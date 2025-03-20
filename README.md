@@ -1,5 +1,36 @@
 # currencyfmt
+## Abstract
 A configurable command line tool for currency and commodity amount formatting.
+
+## Building and Running the Application
+### Build
+Build the application using `cargo`:
+
+```bash
+cargo build
+```
+
+You can start the application using `cargo` directly: 
+
+```bash
+cargo run -- --help
+```
+
+## Command Line Arguments
+`currencyfmt` supports the following command line parameters:
+
+```
+Usage: currencyfmt [OPTIONS] [NUMBERS]...
+
+Arguments:
+  [NUMBERS]...  amount-commodity pairs to be pretty printed
+
+Options:
+  -c, --configuration <CONFIGURATION>  optional path to the configuration file to be used. You can overwrite the default configuration path using this option
+  -d, --delimiter <DELIMITER>          optional delimiter string that separates amount-commodity pairs inside the application input
+  -h, --help                           Print help
+  -V, --version                        Print version
+```
 
 ## Configuration
 ### Options
