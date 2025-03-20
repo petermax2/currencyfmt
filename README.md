@@ -2,7 +2,7 @@
 A configurable command line tool for currency and commodity amount formatting.
 
 ## Configuration
-### Opiions
+### Options
 
 `currencyfmt` allows to configure
 
