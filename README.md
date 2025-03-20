@@ -23,7 +23,7 @@ The command line option has priority over all other options.
 
 You can specify the path to the configuration file in the **environment variable** `CURRENCYFMT_CONFIG`.
 
-If neither the command line option, nor the environment variable is set, `currencyfmt` will lokk at your home directory at `~/.config/currencyfmt/config.toml`.
+If neither the command line option, nor the environment variable is set, `currencyfmt` will look at your home directory at `~/.config/currencyfmt/config.toml`.
 
 ### Example File
 
