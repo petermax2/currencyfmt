@@ -1,8 +1,10 @@
 use std::path::PathBuf;
 
 use clap::Parser;
+use config::FormatterConfig;
 
 mod config;
+mod error;
 
 /// A configurable command line tool for currency and commodity amount formatting and pretty-printing.
 #[derive(Parser)]
@@ -22,18 +24,11 @@ struct CurrencyFmtCmd {
 }
 
 fn main() {
-    let _cli = CurrencyFmtCmd::parse();
+    let command = CurrencyFmtCmd::parse();
+    let _config = FormatterConfig::load(command.configuration).unwrap_or_else(|err| {
+        eprintln!("[ERROR] {}", err);
+        std::process::exit(1);
+    });
 
     println!("Hello, world!");
-}
-
-#[cfg(test)]
-mod tests {
-    // use super::*;
-
-    #[test]
-    fn test_empty() {
-        // this is a placeholder - will be removed as soon as useful test cases are available
-        assert_eq!(1, 1);
-    }
 }
