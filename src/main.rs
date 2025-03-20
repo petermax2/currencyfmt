@@ -2,6 +2,8 @@ use std::path::PathBuf;
 
 use clap::Parser;
 
+mod config;
+
 /// A configurable command line tool for currency and commodity amount formatting and pretty-printing.
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
